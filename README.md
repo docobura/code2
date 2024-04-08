@@ -4,8 +4,7 @@ week 2 code challenge
 
 2024/03/22
 
-By Doc Obura https://github.com/docobura/week1challenge.git
-
+By Doc Obura https://github.com/docobura/code2.git
 ## Description
 Three javascript scripts that do the following
 
