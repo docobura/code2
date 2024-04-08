@@ -1,24 +1,29 @@
-const readline = require('readline');//allows console manipulation
+const readline = require('readline');
 
 const rl = readline.createInterface({
-  input: process.stdin, //allows prnt in 
-  output: process.stdout //allows print out 
+  input: process.stdin, //set input
+  output: process.stdout //set output
 });
-
+//function to handle swtching of cases after input is written
 function swapCase(str) {
   let swappedStr = '';
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === str[i].toUpperCase()) {// turns lower case into upper case
-      swappedStr += str[i].toLowerCase();// turns upper case to lower case
+    if (str[i] === str[i].toUpperCase()) { //check if character is upper case 
+      swappedStr += str[i].toLowerCase(); //swap
     } else {
-      swappedStr += str[i].toUpperCase();//swaps lower to upper and  uppeer to lower 
+      swappedStr += str[i].toUpperCase();
     }
   }
   return swappedStr;
 }
 
-rl.question('Enter a string: ', (inputString) => {
-  const swappedString = swapCase(inputString);
-  console.log('Swapped Case:', swappedString);//swaps the cases 
-  rl.close();c
-});
+function getInputAndSwapCase() {
+  rl.question('Enter a string: ', (inputString) => {
+    const swappedString = swapCase(inputString);
+    console.log('Swapped Case:', swappedString);
+    rl.close(); //Console readline interface close
+  });
+}
+
+// Call the function to get input and swap case
+getInputAndSwapCase();

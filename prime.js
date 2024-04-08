@@ -1,8 +1,8 @@
 const readline = require('readline');
 
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+    input: process.stdin,
+    output: process.stdout
 });
 
 // Helper function to check if a number is prime
@@ -24,10 +24,15 @@ function filterPrimes(array) {
     return array.filter(num => isPrime(num));
 }
 
-// Read input array from the user
-rl.question("Enter numbers separated by spaces: ", function(input) {
-    const inputArray = input.split(" ").map(Number);
-    const resultArray = filterPrimes(inputArray);
-    console.log("Prime numbers from the input array:", resultArray);
-    rl.close();
-});
+// Function to read input array from the user and filter primes
+function getInputAndFilterPrimes() {
+    rl.question("Enter numbers separated by spaces: ", function (input) {
+        const inputArray = input.split(" ").map(Number);
+        const resultArray = filterPrimes(inputArray);
+        console.log("Prime numbers from the input array:", resultArray);
+        rl.close();
+    });
+}
+
+// Call the function to get input from the user and filter primes
+getInputAndFilterPrimes();
