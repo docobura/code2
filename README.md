@@ -26,7 +26,7 @@ Node.JS
 ### Installation instruction
 1. Clone this repository using * git clone git@github.com:docobura/code1-.git
 2. Navigate to the project folder on your bash terminal.
-3. Run the application using * node grade.js and node speed.js
+3. Run the application using * node prime.js and node array.js and node cap.js
 
 
 ## Technologies used
